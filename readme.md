@@ -1,2 +1,2 @@
 # Portfolio
-- [link](https://imranesarsri.github.io/portfolio_test/)
+- [link](https://imranesarsri.github.io/portfolio/)
