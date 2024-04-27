@@ -7,3 +7,7 @@
 .education div .edu-text-box:not(:last-child) {
     margin: 0 0 2.5rem 0;
 }
+
+.fa-github:hover {
+    color: red !important;
+}
