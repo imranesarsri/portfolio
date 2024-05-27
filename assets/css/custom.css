@@ -11,3 +11,11 @@
 .fa-github:hover {
     color: red !important;
 }
+
+.h-full {
+    height: 100% !important;
+}
+
+.w-full {
+    width: 100% !important;
+}
