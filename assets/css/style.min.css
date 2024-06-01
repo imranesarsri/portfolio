@@ -6275,3 +6275,9 @@ svg path {
 }
 
 /*# sourceMappingURL=style.min.css.map */
+
+/* navBar  */
+
+.active {
+    color: var(--s1) !important;
+}

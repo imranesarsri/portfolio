@@ -19,3 +19,7 @@
 .w-full {
     width: 100% !important;
 }
+
+.text-justify {
+    text-align: justify !important;
+}

@@ -103,8 +103,8 @@
 									</div>
 									<ul
 										class="custom-nav d-grid d-lg-flex gap-5 gap-lg-8 gap-xl-10 justify-content-lg-start">
-										<li class="menu-item position-relative">
-											<a href="index.html">
+										<li class="menu-item position-relative ">
+											<a class="active" href="index.html">
 												About
 											</a>
 										</li>
@@ -157,8 +157,8 @@
 							</div>
 							<div class="d-flex justify-content-center">
 								<a href="" class="kewta-btn d-flex align-items-center">
-									<span class="kew-text">
-										Export CV
+									<span class="kew-text text-uppercase" id="importCv">
+										import cv
 									</span>
 									<span class="kew-arrow">
 										<div class="kt-one">
@@ -431,10 +431,10 @@
 								</li>
 							</ul>
 							<div class="stay mt-xxl-5 mt-xl-5 mt-lg-10 mt-12">
-								<a href="about-two.html" class="d-flex stay-with justify-content-start n06">
+								<a href="./contact.html" class="d-flex stay-with justify-content-start n06">
 									Stay With Me
 								</a>
-								<a href="about-two.html"
+								<a href="./contact.html"
 									class="d-flex mt-2 cmn-footarrow align-items-center justify-content-between">
 									<span class="fw_500 fs-seven n0-color fs-seven fw_300">
 										Contact
@@ -527,23 +527,24 @@
 						</span>
 					</div>
 					<ul class="footer-link justify-content-center flex-wrap position-relative cus-z1">
+
 						<li>
-							<a href="index.html">
-								Home
-							</a>
-						</li>
-						<li>
-							<a href="./pages/about.html">
+							<a href="./index.html">
 								About
 							</a>
 						</li>
 						<li>
-							<a href="./pages/project.html">
-								Works
+							<a href="./skills.html">
+								skills
 							</a>
 						</li>
 						<li>
-							<a href="./pages/contact.html">
+							<a href="./projects.html">
+								Projects
+							</a>
+						</li>
+						<li>
+							<a href="./contact.html">
 								Contact
 							</a>
 						</li>
@@ -570,6 +571,19 @@
 	<script src="assets/js/plugins/odometer.js"></script>
 	<!-- ==== js Mian start ==== -->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		document.getElementById('importCv').addEventListener('click', function () {
+			// Path to the CV PDF
+			let cvPath = 'assets/cv/cv_french.pdf';
+
+			// Open the PDF in a new window and trigger the print dialog
+			let printWindow = window.open(cvPath, '_blank');
+			printWindow.addEventListener('load', function () {
+				printWindow.print();
+			});
+		});
+	</script>
 
 </body>
 
