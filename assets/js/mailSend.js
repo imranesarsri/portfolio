@@ -49,11 +49,32 @@ function sendEmail() {
 
         emailjs.send("service_a7epvt4", "template_5tx71us", parameters)
             .then(() => {
-                alert('Thank you for your message. I appreciate your time and will get back to you soon.');
+                // Create the success alert div
+                const successAlert = `
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    <strong>Thank you</strong> for your message. I appreciate your time and will get back to you soon.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+                alertContainer.innerHTML = successAlert;
+
+                // Clear the fields
+                nameField.value = "";
+                emailField.value = "";
+                subjectField.value = "";
+                phoneField.value = "";
+                messageField.value = "";
             })
             .catch(error => {
                 console.error('Failed to send email:', error);
-                alert('Failed to send your message. Please try again later.');
+                // Create the error alert div
+                const errorAlert = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error</strong> Failed to send your message. Please try again later.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+                alertContainer.innerHTML = errorAlert;
             });
     }
 }
