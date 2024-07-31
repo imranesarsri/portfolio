@@ -57,7 +57,6 @@ function sendEmail() {
                 </div>
             `;
                 alertContainer.innerHTML = successAlert;
-
                 // Clear the fields
                 nameField.value = "";
                 emailField.value = "";
